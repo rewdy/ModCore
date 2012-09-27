@@ -32,6 +32,9 @@ nav ul.menu {
 nav ul.menu li {
 	.menu_list_item;
 	.menu_list_item_centered;
+	@media only screen and (max-width: 640px) {
+		.menu_list_mobile;
+	}
 }
 
 nav ul.menu li a {
@@ -39,9 +42,7 @@ nav ul.menu li a {
 	&:hover {
 		.menu_list_link_hover;
 	}
-	@media only screen and (max-width: 640px) {
-		.menu_list_link_mobile;
-	}
+	
 }
 
 /* Below are the actual styles */
@@ -93,7 +94,7 @@ nav ul.menu li a {
 }
 
 // mobile ones
-.menu_list_link_mobile {
+.menu_list_mobile {
 	float:none;
 }
 

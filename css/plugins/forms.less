@@ -3,33 +3,36 @@
 @font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // basic form item container
-.form-item {
+.form_item,
+fieldset {
 	margin:0 0 1em 0;
 }
+fieldset fieldset {
+	margin:0;
+}
 // standard labels, legends for checkbox and radio arrays
-.form-item label {
+.form_item label,
+.form_item fieldset legend,
+fieldset.select legend {
 	display:block;
 	font-weight:bold;
 }
-// labels for checkboxes, radios
-.form-radios,
-.form-checkboxes {
+// grouped content for checkboxes
+.form_item fieldset,
+fieldset.select {
 	column-count: 3;
 	column-gap:2%;
 }
-.form-radios label,
-.form-checkboxes label {
+fieldset.select label,
+.form_item fieldset label {
 	display:inline;
 	font-weight:normal;
 	cursor:pointer;
 	margin-right:1em;
 }
-.form-radios .form-item,
-.form-checkboxes .form-item {
-	margin:0;
-}
+
 // standard input help
-.form-item .description {
+.form_item .form_help {
 	font-size:0.9em;
 	font-style:italic;
 }

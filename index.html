@@ -13,120 +13,157 @@
 		<![endif]-->
 	</head>
 	<body>
-		<header class="grid">
-			<h1 class="center">CS Core</h1>
-			<nav>
-				<div class="full">
-					<ul id="menu">
-						<li><a href="#">Main Nav Item 1</a></li>
-						<li><a href="#">Main Nav Item 2</a></li>
-						<li><a href="#">Main Nav Item 3</a></li>
-						<li><a href="#">Main Nav Item 4</a></li>
-						<li><a href="#">Main Nav Item 5</a></li>
-					</ul>
-				<div>
-			</nav>
-		</header>
-		<div class="grid">
-			<div class="quarter">
-				<ul class="lined">
-					<li><a href="#">Side Nav Item 1</a></li>
-					<li><a href="#">Side Nav Item 2</a></li>
-					<li><a href="#">Side Nav Item 3</a></li>
-					<li><a href="#">Side Nav Item 4</a></li>
-					<li><a href="#">Side Nav Item 5</a></li>
-				</ul>
+		<div id="wrapper">
+			<section id="preamble" class="row">
+				<div class="grid">
+					<div class="full">
+						Today's Date is September 28th, 2012
+					</div>
+				</div> <!-- close .grid -->
+			</section>
+			<header>
+				<div class="grid">
+					<div class="full">
+						<h1 class="center">CS Core</h1>
+					</div>
+				</div> <!-- close .grid -->
+			</header>
+			<div id="nav_holder">
+				<div class="grid">
+					<div class="full">
+						<nav>
+							<ul class="menu">
+								<li><a href="#">Main Nav Item 1</a></li>
+								<li><a href="#">Main Nav Item 2</a></li>
+								<li><a href="#">Main Nav Item 3</a></li>
+								<li><a href="#">Main Nav Item 4</a></li>
+								<li><a href="#">Main Nav Item 5</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div> <!-- close .grid -->
 			</div>
-			<div class="threequarter">
-				<h1>Header 1 Test</h1>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-				<h2>Header 2 Test</h2>
-				<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
-				<h3>Header 3 Test</h3>
-				<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
-				<blockquote>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</blockquote>
-				<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
-				<h3>Header 3 Test</h3>
-				<p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas <code>code</code> nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
-				<h4>Header 4 Test</h4>
-				<ul>
-					<li>List Item</li>
-					<li>List Item</li>
-					<li>List Item</li>
-					<li>List Item</li>
-				</ul>
-				<h4>Header 4 Test</h4>
-				<ol>
-					<li>List Item</li>
-					<li>List Item</li>
-					<li>List Item</li>
-					<li>List Item</li>
-				</ol>
-				<h3>Table Example</h3>
-				<table cellspacing="0" cellpadding="0">
-					<thead>
-						<tr>
-							<th>Column 1</th>
-							<th>Column 2</th>
-							<th>Column 3</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>1</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>2</td>
-							<td>2</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>3</td>
-							<td>3</td>
-						</tr>
-					</tbody>
-				</table>
-				<h3>Form Example</h3>
-				<form name="test" method="get" action="">
-					<div class="form_item">
-						<label for="name">Name</label>
-						<div class="input_holder">
-							<input type="text" name="name" class="text" />
-							<div class="input_help">Lorem ipsum sit dolor amet jiggy.</div>
-						</div>
+			<section id="primary_row">
+				<div class="grid row">
+					
+					<div class="quarter">
+						<ul class="lined linked">
+							<li><a href="">Side Nav Item 1</a></li>
+							<li><a href="">Side Nav Item 2</a></li>
+							<li><a href="">Side Nav Item 3</a></li>
+							<li><a href="">Side Nav Item 4</a></li>
+							<li><a href="">Side Nav Item 5</a></li>
+						</ul>
 					</div>
-					<div class="form_item">
-						<label for="email">Email</label>
-						<div class="input_holder">
-							<input type="text" name="email" class="text" />
-							<div class="input_help">Lorem ipsum sit dolor amet jiggy.</div>
-						</div>
+					<div class="threequarters">
+						<h1>Header 1 Test</h1>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<h2>Header 2 Test</h2>
+						<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+						<h3>Header 3 Test</h3>
+						<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+						<blockquote>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</blockquote>
+						<p>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+						<h3>Header 3 Test</h3>
+						<p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas <code>code</code> nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+						<h4>Header 4 Test</h4>
+						<ul>
+							<li>List Item</li>
+							<li>List Item</li>
+							<li>List Item</li>
+							<li>List Item</li>
+						</ul>
+						<h4>Header 4 Test</h4>
+						<ol>
+							<li>List Item</li>
+							<li>List Item</li>
+							<li>List Item</li>
+							<li>List Item</li>
+						</ol>
+						<h3>Table Example</h3>
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th>Column 1</th>
+									<th>Column 2</th>
+									<th>Column 3</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>2</td>
+									<td>2</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>3</td>
+									<td>3</td>
+								</tr>
+							</tbody>
+						</table>
+						<h3>Form Example</h3>
+						<form name="test" method="get" action="">
+							<div class="form_item">
+								<label for="name">Name</label>
+								<div class="input_holder">
+									<input type="text" name="name" class="text" />
+									<div class="input_help">Lorem ipsum sit dolor amet jiggy.</div>
+								</div>
+							</div>
+							<div class="form_item">
+								<label for="email">Email</label>
+								<div class="input_holder">
+									<input type="text" name="email" class="text" />
+									<div class="input_help">Lorem ipsum sit dolor amet jiggy.</div>
+								</div>
+							</div>
+							<div class="form_item">
+								<label for="phone">Phone Number</label>
+								<div class="input_holder">
+									<input type="text" name="phone" class="text narrow" />
+									<div class="input_help">Format: (555) 555-1234</div>
+								</div>
+							</div>
+							<fieldset class="select">
+								<legend>Color Preference</legend>
+								<div class="input_holder">
+									<label><input type="radio" name="color" value="warm" /> Warm Colors</label>
+									<label><input type="radio" name="color" value="cool" /> Cool Colors</label>
+								</div>
+							</fieldset>
+							<div class="form_item submit">
+								<div class="input_holder">
+									<input type="submit" value="Save" />
+									<input type="reset" value="Reset Form" />
+								</div>
+							</div>
+						</form>
 					</div>
-					<div class="form_item">
-						<label for="phone">Phone Number</label>
-						<div class="input_holder">
-							<input type="text" name="phone" class="text narrow" />
-							<div class="input_help">Format: (555) 555-1234</div>
-						</div>
+				</div> <!-- close .grid.row -->
+			</section>
+
+			<footer>
+				<div class="grid">
+					<div class="third">
+						<h3>Hot Links</h3>
+
 					</div>
-					<fieldset class="select">
-						<legend>Color Preference</legend>
-						<div class="input_holder">
-							<label><input type="radio" name="color" value="warm" /> Warm Colors</label>
-							<label><input type="radio" name="color" value="cool" /> Cool Colors</label>
-						</div>
-					</fieldset>
-					<div class="form_item submit">
-						<div class="input_holder">
-							<input type="submit" value="Save" />
-							<input type="reset" value="Reset Form" />
-						</div>
+					<div class="third">
+						<h3>Contact Us</h3>
+						
 					</div>
-				</form>
-			</div>
-		</div>
+					<div class="third">
+						<h3>Social Mediar</h3>
+
+					</div>
+				</div> <!-- close .grid -->
+			</footer>
+		</div> <!-- close #wrapper -->
 	</body>
 </html>
