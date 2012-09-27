@@ -1,0 +1,103 @@
+/* Forms */
+
+@font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// basic form item container
+.form-item {
+	margin:0 0 1em 0;
+}
+// standard labels, legends for checkbox and radio arrays
+.form-item label {
+	display:block;
+	font-weight:bold;
+}
+// labels for checkboxes, radios
+.form-radios,
+.form-checkboxes {
+	column-count: 3;
+	column-gap:2%;
+}
+.form-radios label,
+.form-checkboxes label {
+	display:inline;
+	font-weight:normal;
+	cursor:pointer;
+	margin-right:1em;
+}
+.form-radios .form-item,
+.form-checkboxes .form-item {
+	margin:0;
+}
+// standard input help
+.form-item .description {
+	font-size:0.9em;
+	font-style:italic;
+}
+
+// inputs, textareas, selects, buttons, etc.!
+input[type=text],
+input[type=password],
+textarea,
+select {
+	font-size:1em;
+	font-family: @font;
+	padding:0.4em;
+	border:1px solid #ddd;
+	box-shadow:inset 1px 1px 3px rgba(0,0,0,0.1);
+	outline: none;
+	&:focus {
+		border-color: #666;
+	}
+}
+input[type=text],
+input[type=password] {
+	width: 24em;
+}
+button,
+a.button,
+input[type=submit],
+input[type=button],
+input[type=reset] {
+	display:inline-block;
+	font-size:1em;
+	font-family: @font;
+	padding:0.4em 0.7em;
+	color:#fff;
+	background: #333; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+	border:1px solid #666;
+	cursor: pointer;
+}
+
+// some classes for variations
+div.submit {
+	padding-top:1em;
+	border-top:1px solid #ddd;
+}
+input.narrow {
+	width:10em;
+}
+input.long {
+	width:30em;
+}
+input.full {
+	width:96%;
+}
+/* media specifics */
+@media only screen and (max-width: 640px) {
+	input[type=text],
+	input[type=password],
+	input.long {
+		width:96%;
+	}
+	input.narrow {
+		width:43%;
+	}
+}
+
+

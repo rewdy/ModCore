@@ -1,0 +1,121 @@
+/* Percent Grid */
+
+@maxwidth: 1140px;
+@minwidth: 300px;
+
+#wrapper.blocked {
+	margin:0 auto 3em auto;
+	max-width: @maxwidth;
+}
+
+.grid {
+	margin:0 auto;
+	max-width: @maxwidth;
+	min-width: @minwidth;
+}
+.grid:after {
+	.clearfixed;
+}
+
+.row {
+	margin-bottom:1.5em;
+}
+
+.column {
+	float:left;
+	margin:0 2%;
+}
+.grid .g1 {
+	.column;
+	width:4.3333%;
+}
+.grid .g2 {
+	.column;
+	width:12.6667%;
+}
+.grid .quarter,
+.grid .g3 {
+	.column;
+	width:21%;
+}
+.grid .third,
+.grid .g4 {
+	.column;
+	width:29.3333%
+}
+.grid .g5 {
+	.column;
+	width:37.6667%
+}
+.grid .half,
+.grid .g6 {
+	.column;
+	width:46%;
+}
+.grid .g7 {
+	.column;
+	width:54.3333%
+}
+.grid .twothirds,
+.grid .twothird,
+.grid .g8 {
+	.column;
+	width:62.6667%;
+}
+.grid .threequarter,
+.grid .threequarters,
+.grid .g9 {
+	.column;
+	width:71%
+}
+.grid .g10 {
+	.column;
+	width:79.3333%
+}
+.grid .g11 {
+	.column;
+	width:87.6667% 
+}
+.grid .full,
+.grid .g12 {
+	.column;
+	width:96%;
+}
+
+@media only screen and (max-width: 640px) {
+	/* Reset grid */
+	.column {
+		float:none;
+		margin:0.75em;
+	}
+	.grid .g1, .grid .g2,
+	.grid .g3, .grid .g4,
+	.grid .g5, .grid .g6,
+	.grid .g7, .grid .g8,
+	.grid .g9, .grid .g10,
+	.grid .g11, .grid .g12,
+	.grid .half,
+	.grid .third,
+	.grid .quarter,
+	.grid .threequarter,
+	.grid .threequarters,
+	.grid .twothird,
+	.grid .twothirds,
+	.grid .full {
+		.column;
+		width:auto;
+	}
+}
+
+/* Clearfixed styles to be included elsewhere. */
+.clearfixed {
+	content: " ";
+	display: block;
+	clear: left;
+	height: 0;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	.clearfixed;
+}

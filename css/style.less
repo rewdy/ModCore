@@ -1,0 +1,88 @@
+/*
+
+Stylesheet
+----------
+
+Project:	Title
+Date:		00/00/00
+
+----------
+
+Table of Contents
+-----------------
+
+1. Core
+2. Layout
+3. Module
+4. Theme
+5. State
+
+*/
+
+@background: #fff;
+@color: #666;
+@linkcolor: #333;
+@linkhover: #000;
+@font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* 
+1. Core 
+-------
+*/
+
+// pull in core, type, and form plugins
+@import "plugins/core.less";
+@import "plugins/type.less";
+@import "plugins/forms.less";
+
+body {
+	background-color:@background;
+	color:@linkcolor;
+	font-family:@font;
+}
+
+
+
+/* 
+2. Layout 
+---------
+*/
+
+// pull in grid
+@import "plugins/grid.less";
+#preamble {
+	background-color:#e6e6e6;
+	padding:0.2em 0;
+}
+footer {
+	background-color: #ccc;
+	padding:1em 0;
+}
+
+/* 
+3. Module 
+---------
+*/
+
+// pull in the various module plugins
+@import "plugins/menu.less";
+@import "plugins/drupal.less";
+/* - errors, messages - CakePHP */
+
+
+/* 
+4. Theme
+--------
+*/
+
+/* - ? media queries ? */
+
+
+/* 
+5. State 
+--------
+*/
+
+// pull in classes
+@import "plugins/classes.less";
+
+
