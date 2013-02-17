@@ -17,15 +17,34 @@ Table of Contents
 4. Theme
 5. State
 
+----------
+
+Directions: Use either the drupal prefixed plugins or the no prefix plugins. Don't use both
+as there is a lot of overlap between the two.
+
+----------
+
 */
 
 @background: #fff;
-@color: #666;
-@linkcolor: #333;
+@color: #333;
+@accent: #0058a9;
+@linkcolor: @accent;
 @linkhover: #000;
-@font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-/* 
-1. Core 
+@linecolor: #e6e6e6;
+
+@font: sans-serif;
+
+@menubackgroundcolor: @accent;
+@menulinkcolor: #fff;
+@menuline: @linecolor;
+@menulighthover: #f2f2f2;
+
+@maxwidth: 1140px;
+@minwidth: 300px;
+
+/*
+1. Core
 -------
 */
 
@@ -33,17 +52,18 @@ Table of Contents
 @import "plugins/core.less";
 @import "plugins/type.less";
 @import "plugins/forms.less";
+//@import "plugins/drupal-forms";
 
 body {
 	background-color:@background;
-	color:@linkcolor;
+	color:@color;
 	font-family:@font;
 }
 
 
 
-/* 
-2. Layout 
+/*
+2. Layout
 ---------
 */
 
@@ -60,31 +80,29 @@ footer {
 	padding:1em 0;
 }
 
-/* 
-3. Module 
+/*
+3. Module
 ---------
 */
 
 // pull in the various module plugins
-@import "plugins/menu.less";
-@import "plugins/drupal.less";
-/* - errors, messages - CakePHP */
+@import "plugins/menu";
+//@import "plugin/drupal-menu"
+//@import "plugins/drupal";
 
 
-/* 
+/*
 4. Theme
 --------
 */
 
-/* - ? media queries ? */
 
 
-/* 
-5. State 
+/*
+5. State
 --------
 */
 
 // pull in classes
 @import "plugins/classes.less";
-
 
