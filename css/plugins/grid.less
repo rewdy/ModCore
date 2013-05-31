@@ -1,17 +1,22 @@
 /* Percent Grid */
 
+@gutter:2em;
+@totalcol:12;
+
+// wrapper for the page
 #wrapper.blocked {
 	margin:0 auto 3em auto;
 	max-width: @maxwidth;
 }
 
+// grid columns holder
 .grid {
 	margin:0 auto;
 	max-width: @maxwidth;
 	min-width: @minwidth;
-}
-.grid:after {
-	.clearfixed;
+	&:after {
+		.clearfixed;
+	}
 }
 
 .row {
@@ -19,88 +24,50 @@
 }
 
 .column {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	float:left;
-	margin:0 2%;
+	padding:0 @gutter/2;
 }
-.grid .g1 {
-	.column;
-	width:4.3333%;
+
+.gridLoop (@index) when (@index > 0) {
+	(~".grid .g@{index}") {
+		.column;
+		width:percentage(@index/@totalcol);
+	}
+
+	.gridLoop(@index - 1);
 }
-.grid .g2 {
-	.column;
-	width:12.6667%;
-}
-.grid .quarter,
-.grid .g3 {
-	.column;
-	width:21%;
-}
-.grid .third,
-.grid .g4 {
-	.column;
-	width:29.3333%
-}
-.grid .g5 {
-	.column;
-	width:37.6667%
-}
-.grid .half,
-.grid .g6 {
-	.column;
-	width:46%;
-}
-.grid .g7 {
-	.column;
-	width:54.3333%
-}
-.grid .twothirds,
-.grid .twothird,
-.grid .g8 {
-	.column;
-	width:62.6667%;
-}
-.grid .threequarter,
-.grid .threequarters,
-.grid .g9 {
-	.column;
-	width:71%
-}
-.grid .g10 {
-	.column;
-	width:79.3333%
-}
-.grid .g11 {
-	.column;
-	width:87.6667%
-}
-.grid .full,
-.grid .g12 {
-	.column;
-	width:96%;
+
+.gridLoop(@totalcol);
+
+.grid .row {
+	margin-bottom:0;
+	margin-left:-(@gutter/2);
+	margin-right:-(@gutter/2);
 }
 
 @media only screen and (max-width: 640px) {
 	/* Reset grid */
-	.column {
+	.mob_column {
 		float:none;
-		margin:0.75em;
+		margin:0.75em 0;
 	}
-	.grid .g1, .grid .g2,
-	.grid .g3, .grid .g4,
-	.grid .g5, .grid .g6,
-	.grid .g7, .grid .g8,
-	.grid .g9, .grid .g10,
-	.grid .g11, .grid .g12,
-	.grid .half,
-	.grid .third,
-	.grid .quarter,
-	.grid .threequarter,
-	.grid .threequarters,
-	.grid .twothird,
-	.grid .twothirds,
-	.grid .full {
-		.column;
-		width:auto;
+	.gridLoop (@index) when (@index > 0) {
+		(~".grid .g@{index}") {
+			.mob_column;
+			width:auto;
+		}
+
+		.gridLoop(@index - 1);
+	}
+	.gridLoop(@totalcol);
+
+	.grid .row {
+		margin-bottom:0;
+		margin-left:0;
+		margin-right:0;
 	}
 }
 
