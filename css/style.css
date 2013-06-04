@@ -38,7 +38,7 @@ div.submit{padding-top:1em;border-top:1px solid #ddd;}
 input.narrow{width:10em;}
 input.long{width:30em;}
 input.full{width:96%;}
-@media only screen and (max-width:640px){input[type=text],input[type=password],input.long{width:96%;} input.narrow{width:43%;}}body{background-color:#ffffff;color:#333333;font-family:sans-serif;}
+@media only screen and (max-width:640px){input[type=text],input[type=password],input.long{width:96%;} input.narrow{width:43%;}}body{background-color:#ccc;font-family:sans-serif;}
 #wrapper.blocked{margin:0 auto 3em auto;max-width:1140px;}
 .grid{margin:0 auto;max-width:1140px;min-width:300px;}.grid:after{content:" ";display:block;clear:left;height:0;overflow:hidden;}
 .row{margin-bottom:1.5em;}
@@ -59,7 +59,8 @@ input.full{width:96%;}
 @media only screen and (max-width:640px){.mob_column{float:none;margin:0.75em 0;} .grid .g12{float:none;margin:0.75em 0;width:auto;} .grid .g11{float:none;margin:0.75em 0;width:auto;} .grid .g10{float:none;margin:0.75em 0;width:auto;} .grid .g9{float:none;margin:0.75em 0;width:auto;} .grid .g8{float:none;margin:0.75em 0;width:auto;} .grid .g7{float:none;margin:0.75em 0;width:auto;} .grid .g6{float:none;margin:0.75em 0;width:auto;} .grid .g5{float:none;margin:0.75em 0;width:auto;} .grid .g4{float:none;margin:0.75em 0;width:auto;} .grid .g3{float:none;margin:0.75em 0;width:auto;} .grid .g2{float:none;margin:0.75em 0;width:auto;} .grid .g1{float:none;margin:0.75em 0;width:auto;} .grid .row{margin-bottom:0;margin-left:0;margin-right:0;}}.clearfixed{content:" ";display:block;clear:left;height:0;overflow:hidden;}
 .clearfix:after{content:" ";display:block;clear:left;height:0;overflow:hidden;}
 #preamble{background-color:#e6e6e6;color:#999999;font-size:0.8em;padding:0.2em 0;}
-footer{background-color:#ccc;padding:1em 0;}
+#wrapper{background-color:#ffffff;color:#333333;}
+footer{padding:1em 0;}
 #nav_holder{margin:0 0 1em 0;background-color:#0058a9;}#nav_holder:after{content:'\0020';display:block;clear:left;height:0;overflow:hidden;}
 nav{background-color:#0058a9;color:#ffffff;margin:0;padding:0;float:left;width:100%;overflow:hidden;position:relative;}
 nav ul.menu{margin:0;padding:0;clear:left;float:left;position:relative;left:50%;}

@@ -55,12 +55,9 @@ as there is a lot of overlap between the two.
 //@import "plugins/drupal-forms";
 
 body {
-	background-color:@background;
-	color:@color;
+	background-color:#ccc; // footer color
 	font-family:@font;
 }
-
-
 
 /*
 2. Layout
@@ -75,8 +72,11 @@ body {
 	font-size:0.8em;
 	padding:0.2em 0;
 }
+#wrapper {
+	background-color:@background;
+	color:@color;
+}
 footer {
-	background-color: #ccc;
 	padding:1em 0;
 }
 
