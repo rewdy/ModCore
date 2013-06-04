@@ -1,0 +1,108 @@
+/*
+
+Stylesheet
+----------
+
+Project:	Title
+Date:		00/00/00
+
+----------
+
+Table of Contents
+-----------------
+
+1. Core
+2. Layout
+3. Module
+4. Theme
+5. State
+
+----------
+
+Directions: Use either the drupal prefixed plugins or the no prefix plugins. Don't use both
+as there is a lot of overlap between the two.
+
+----------
+
+*/
+
+@background: #fff;
+@color: #333;
+@accent: #0058a9;
+@linkcolor: @accent;
+@linkhover: #000;
+@linecolor: #e6e6e6;
+
+@font: sans-serif;
+
+@menubackgroundcolor: @accent;
+@menulinkcolor: #fff;
+@menuline: @linecolor;
+@menulighthover: #f2f2f2;
+
+@maxwidth: 1140px;
+@minwidth: 300px;
+
+/*
+1. Core
+-------
+*/
+
+// pull in core, type, and form plugins
+@import "plugins/core.less";
+@import "plugins/type.less";
+@import "plugins/forms.less";
+//@import "plugins/drupal-forms";
+
+body {
+	background-color:#ccc; // footer color
+	font-family:@font;
+}
+
+/*
+2. Layout
+---------
+*/
+
+// pull in grid
+@import "plugins/grid.less";
+#preamble {
+	background-color:darken(@background, 10%);
+	color:darken(@background, 40%);
+	font-size:0.8em;
+	padding:0.2em 0;
+}
+#wrapper {
+	background-color:@background;
+	color:@color;
+}
+footer {
+	padding:1em 0;
+}
+
+/*
+3. Module
+---------
+*/
+
+// pull in the various module plugins
+@import "plugins/menu";
+//@import "plugin/drupal-menu"
+//@import "plugins/drupal";
+
+
+/*
+4. Theme
+--------
+*/
+
+
+
+/*
+5. State
+--------
+*/
+
+// pull in classes
+@import "plugins/classes.less";
+

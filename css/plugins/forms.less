@@ -1,0 +1,108 @@
+/* Forms */
+
+// basic form item container
+.form_item,
+fieldset {
+	margin:0 0 1em 0;
+}
+fieldset fieldset {
+	margin:0;
+}
+// standard labels, legends for checkbox and radio arrays
+.form_item label,
+.form_item fieldset legend,
+fieldset.select legend {
+	display:block;
+	font-weight:bold;
+}
+// grouped content for checkboxes
+.form_item fieldset,
+fieldset.select {
+	column-count: 3;
+	column-gap:2%;
+}
+fieldset.select label,
+.form_item fieldset label {
+	display:inline;
+	font-weight:normal;
+	cursor:pointer;
+	margin-right:1em;
+}
+
+// standard input help
+.form_item .form_help {
+	font-size:0.9em;
+	font-style:italic;
+}
+
+// inputs, textareas, selects, buttons, etc.!
+input[type=text],
+input[type=password],
+textarea,
+select {
+	font-size:1em;
+	font-family: @font;
+	padding:0.4em;
+	border:1px solid #ddd;
+	box-shadow:inset 1px 1px 3px rgba(0,0,0,0.1);
+	outline: none;
+	&:focus {
+		border-color: #666;
+	}
+}
+input[type=text],
+input[type=password] {
+	width: 24em;
+}
+button,
+a.button,
+input[type=submit],
+input[type=button],
+input[type=reset] {
+	display:inline-block;
+	font-size:1em;
+	line-height:1.5em;
+	font-family: @font;
+	padding:0.3em 0.8em;
+	color:#fff;
+	background: @accent;
+	border: solid darken(@accent, 10%);
+	border-width:0 0 2px 0;
+	cursor: pointer;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	&:active {
+		border-width:0;
+		position:relative;
+		top:2px;
+	}
+}
+
+// some classes for variations
+div.submit {
+	padding-top:1em;
+	border-top:1px solid #ddd;
+}
+input.narrow {
+	width:10em;
+}
+input.long {
+	width:30em;
+}
+input.full {
+	width:96%;
+}
+/* media specifics */
+@media only screen and (max-width: 640px) {
+	input[type=text],
+	input[type=password],
+	input.long {
+		width:96%;
+	}
+	input.narrow {
+		width:43%;
+	}
+}
+
+
