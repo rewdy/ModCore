@@ -15,13 +15,9 @@ footer, header, nav, section, audio, video {
 	display: block;
 }
 
-body {
-	line-height:1.5em;
-}
-
 /* Selection Color */
-::selection 	 	{background: rgb(119,255,209);}
-::-moz-selection 	{background: rgb(119,255,209);}
+::selection 	 	{background: @selection;}
+::-moz-selection 	{background: @selection;}
 img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
-body {-webkit-tap-highlight-color: rgb(119,255,209);}
+body {-webkit-tap-highlight-color: @selection;}

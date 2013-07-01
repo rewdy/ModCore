@@ -1,11 +1,10 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,hgroup,menu,footer,header,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;}
 article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,nav,section,audio,video{display:block;}
-body{line-height:1.5em;}
-::selection{background:#77ffd1;}
-::-moz-selection{background:#77ffd1;}
+::selection{background:#ffeb38;}
+::-moz-selection{background:#ffeb38;}
 img::selection{background:transparent;}
 img::-moz-selection{background:transparent;}
-body{-webkit-tap-highlight-color:#77ffd1;}
+body{-webkit-tap-highlight-color:#ffeb38;}
 h1,h2,h3,h4,h5,h6,p,ul,ol,table,blockquote{margin:0 0 1em 0;}
 h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal;line-height:1.25em;}
 h1{font-size:2em;margin-bottom:0.5em;}
@@ -38,7 +37,7 @@ div.submit{padding-top:1em;border-top:1px solid #ddd;}
 input.narrow{width:10em;}
 input.long{width:30em;}
 input.full{width:96%;}
-@media only screen and (max-width:640px){input[type=text],input[type=password],input.long{width:96%;} input.narrow{width:43%;}}body{background-color:#ccc;font-family:sans-serif;}
+@media only screen and (max-width:640px){input[type=text],input[type=password],input.long{width:96%;} input.narrow{width:43%;}}body{background-color:#ccc;}
 #wrapper.blocked{margin:0 auto 3em auto;max-width:1140px;}
 .grid{margin:0 auto;max-width:1140px;min-width:300px;}.grid:after{content:" ";display:block;clear:left;height:0;overflow:hidden;}
 .row{margin-bottom:1.5em;}
