@@ -24,7 +24,7 @@ blockquote{padding:0.5em 0.8em;font-size:1.2em;font-style:italic;line-height:1.5
 code,pre{font-size:1.15em;padding:0.2em;background-color:#dceeff;}
 pre{padding:0.5em 0.8em;white-space:pre-wrap;}
 hr{margin:1em 0;border-top:1px solid #e6e6e6;}
-a{color:#0058a9;}
+a{color:#0058a9;}a:hover{color:#000000;}
 .form_item,fieldset{margin:0 0 1em 0;}
 fieldset fieldset{margin:0;}
 .form_item label,.form_item fieldset legend,fieldset.select legend{display:block;font-weight:bold;}
