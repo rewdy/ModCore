@@ -23,7 +23,7 @@ nav ul.menu li {
 	position:relative;
 	margin:0;
 	padding:0;
-	@media only screen and (max-width: 640px) {
+	@media only screen and (max-width: @breakpoint) {
 		float:none;
 	}
 }
@@ -35,7 +35,7 @@ nav ul.menu li a {
 	background-color:@menubackgroundcolor;
 	color:@menulinkcolor;
 	text-decoration: none;
-	@media only screen and (max-width: 640px) {
+	@media only screen and (max-width: @breakpoint) {
 		float:none;
 	}
 }
