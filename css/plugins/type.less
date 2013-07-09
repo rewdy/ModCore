@@ -1,75 +1,41 @@
 /* Type + Tags */
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, table, blockquote {
-	margin:0 0 1em 0;
+body {
+	font-family:@font;
+	font-size:@size;
+	line-height:@lineheight;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-size:1em;
-	font-weight:normal;
-	line-height:1.25em;
+	margin:0.2em 0 0.5em 0;
+	line-height:unit(@fontScale*0.93, em);
+	font-weight:500;
 }
-h1 {
-	font-size:2em;
-	margin-bottom:0.5em;
+.headingLoop (@index; @base: 1) when (@index > 0) {
+	@headingSize: round(@base * @headingMultiplier, 3);
+	(~"h@{index}") {
+		font-size:~"@{base}em";
+	}
+	.headingLoop(@index - 1, @headingSize);
 }
-h2 {
-	font-size:1.3em;
-	margin-bottom:0.6em;
-}
-h3 {
-	font-size:1.2em;
-	font-weight: 600;
-	margin-bottom:0.4em;
-}
-h5 {
-	font-size:1.15em;
-	font-style:italic;
-}
-h4 {
-	font-size:1em;
-	margin-bottom:0.5em;
-	font-weight:bold;
-}
+.headingLoop(@headingDeepest);
 
-h6 {
-	font-size:1em;
-	margin-bottom:0.5em;
-	font-weight:bold;
-	font-style:italic;
-}
-
-p {
-	margin:0 0 1em 0;
-}
-
-blockquote {
-	margin-left:2em;
-	margin-right:2em;
-	padding:0.5em 0.8em;
-	font-size:1.2em;
-	font-style:italic;
-	line-height:2em;
-	background-color: lighten(@accent, 70%);
-}
-code {
-	font-size:1.15em;
-	padding:0.2em;
-	background-color: lighten(@accent, 70%);
+p, ul, ol, blockquote, pre, table {
+	margin:0 0 @lineheight 0;
 }
 
 ul li,
 ol li {
-	margin-left:2em;
+	margin-left:unit(@fontScale*2, em);
 }
 
 table {
-	border: 1px solid @linecolor;
+	border:1px solid @linecolor;
 	width:100%;
 	border-collapse: collapse;
 }
 table tr th,
 table tr td {
-	padding:0.2em 0.4em;
+	padding:0 0.4em;
 	margin:0;
 	border-bottom:1px solid @linecolor;
 }
@@ -84,6 +50,23 @@ table tr:hover td {
 	background-color: lighten(@accent, 70%);
 }
 
+blockquote {
+	padding:0.5em 0.8em;
+	font-size:1.2em;
+	font-style:italic;
+	line-height:@lineheight;
+	background-color: lighten(@accent, 60%);
+}
+code, pre {
+	font-size:1.15em;
+	padding:0.2em;
+	background-color: lighten(@accent, 60%);
+}
+pre {
+	padding:0.5em 0.8em;
+	white-space: pre-wrap;
+}
+
 hr {
 	margin:1em 0;
 	border-top:1px solid @linecolor;
@@ -92,3 +75,4 @@ hr {
 a {
 	color: @accent;
 }
+
