@@ -32,7 +32,7 @@
 }
 
 .gridLoop (@index) when (@index > 0) {
-	(~".grid .g@{index}") {
+	.grid .g@{index} {
 		.column;
 		width:percentage(@index/@totalcol);
 	}
@@ -41,7 +41,7 @@
 .gridLoop(@totalcol);
 
 .pushLoop (@index) when (@index > 0) {
-	(~".grid .push@{index}") {
+	.grid .push@{index} {
 		position:relative;
 		left:percentage(@index/@totalcol);
 	}
@@ -50,7 +50,7 @@
 .pushLoop(@totalcol);
 
 .pullLoop (@index) when (@index > 0) {
-	(~".grid .pull@{index}") {
+	.grid .pull@{index} {
 		position:relative;
 		left:-(percentage(@index/@totalcol));
 	}
@@ -71,7 +71,7 @@
 		margin:0.75em 0;
 	}
 	.gridLoop (@index) when (@index > 0) {
-		(~".grid .g@{index}") {
+		.grid .g@{index} {
 			.mob_column;
 			width:auto;
 		}
@@ -81,7 +81,7 @@
 	.gridLoop(@totalcol);
 
 	.pushLoop (@index) when (@index > 0) {
-		(~".grid .push@{index}") {
+		.grid .push@{index} {
 			position:static;
 			left:0;
 		}
@@ -90,7 +90,7 @@
 	.pushLoop(@totalcol);
 
 	.pullLoop (@index) when (@index > 0) {
-		(~".grid .pull@{index}") {
+		.grid .pull@{index} {
 			position:static;
 			left:0;
 		}
