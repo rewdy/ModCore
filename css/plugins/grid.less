@@ -24,11 +24,11 @@
 }
 
 .column {
+	float:left;
+	padding:0 @gutter/2;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	float:left;
-	padding:0 @gutter/2;
 }
 
 .gridLoop (@index) when (@index > 0) {
@@ -36,11 +36,27 @@
 		.column;
 		width:percentage(@index/@totalcol);
 	}
-
 	.gridLoop(@index - 1);
 }
-
 .gridLoop(@totalcol);
+
+.pushLoop (@index) when (@index > 0) {
+	(~".grid .push@{index}") {
+		position:relative;
+		left:percentage(@index/@totalcol);
+	}
+	.pushLoop(@index - 1);
+}
+.pushLoop(@totalcol);
+
+.pullLoop (@index) when (@index > 0) {
+	(~".grid .pull@{index}") {
+		position:relative;
+		left:-(percentage(@index/@totalcol));
+	}
+	.pullLoop(@index - 1);
+}
+.pullLoop(@totalcol);
 
 .grid .row {
 	margin-bottom:0;
@@ -63,6 +79,24 @@
 		.gridLoop(@index - 1);
 	}
 	.gridLoop(@totalcol);
+
+	.pushLoop (@index) when (@index > 0) {
+		(~".grid .push@{index}") {
+			position:static;
+			left:0;
+		}
+		.pushLoop(@index - 1);
+	}
+	.pushLoop(@totalcol);
+
+	.pullLoop (@index) when (@index > 0) {
+		(~".grid .pull@{index}") {
+			position:static;
+			left:0;
+		}
+		.pullLoop(@index - 1);
+	}
+	.pullLoop(@totalcol);
 
 	.grid .row {
 		margin-bottom:0;
