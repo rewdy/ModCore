@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .headingLoop (@index; @base: 1) when (@index > 0) {
 	@headingSize: round(@base * @headingMultiplier, 3);
-	(~"h@{index}") {
+	h@{index} {
 		font-size:~"@{base}em";
 	}
 	.headingLoop(@index - 1, @headingSize);
