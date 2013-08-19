@@ -64,6 +64,16 @@
 	margin-right:-(@gutter/2);
 }
 
+.grid .gcenter {
+	margin-left:auto;
+	margin-right:auto;
+	clear:left;
+	float:none;
+	&:after {
+		.clearfixed;
+	}
+}
+
 @media only screen and (max-width: @breakpoint) {
 	/* Reset grid */
 	.mob_column {
