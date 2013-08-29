@@ -1,5 +1,5 @@
 /* Classes */
-.attn {
+.attn, .lead {
 	font-size:1.15em;
 }
 .right {
@@ -10,6 +10,23 @@
 }
 .center {
 	text-align:center;
+}
+
+@media only screen and (max-width: @breakpoint) {
+	.right {
+		text-align:left;
+	}
+}
+
+ul.blocked,
+ol.blocked {
+	li {
+		margin:0;
+		list-style:none;
+		ul {
+			margin-left:unit(@fontScale*2, em);
+		}
+	}
 }
 
 ul.lined,
@@ -29,6 +46,12 @@ ol.lined li {
 	border-bottom:1px solid #ddd;
 }
 
+@media only screen and (min-width: @breakpoint) {
+	.widetext {
+		.columntext(2);
+	}
+}
+
 img.right {
 	float: right;
 	margin: 0 0 0.5em 0.5em;
@@ -41,4 +64,13 @@ img.left {
 }
 table.narrow {
 	width: auto;
+}
+
+.columntext(@cols) {
+	-webkit-column-count:@cols;
+	-moz-column-count:@cols;
+	column-count:@cols;
+	-webkit-column-gap:@gutter;
+	-moz-column-gap:@gutter;
+	column-gap:@gutter;
 }
