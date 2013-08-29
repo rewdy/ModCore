@@ -11,10 +11,10 @@ Date:		00/00/00
 Table of Contents
 -----------------
 
-1. Core
-2. Layout
-3. Module
-4. Theme
+1. Less Vars
+2. Core
+3. Layout
+4. Sections
 5. State
 
 ----------
@@ -26,35 +26,38 @@ as there is a lot of overlap between the two.
 
 */
 
+/*
+1. Less Vars
+------------
+These variables are all required for ModCore. Feel free to add others, but these ones
+must remain if this are to work properly. These vars will provide the foundation for
+the styles of the site.
+
+*/
+
 @background: #fff;
 @color: #333;
-@accent: #0058a9;
-@linkcolor: @accent;
+@accent: #91c8ef;
+@linkcolor: #5785bd;
 @linkhover: #000;
 @linecolor: #e6e6e6;
 
 @selection: #FFEB38;
 
-@font: sans-serif;
-@size: 1em;
+@font: 'Helvetica Neue', sans-serif;
+@size: 1.125em;
 @fontScale: 1.5; // Used for line-height, margin, etc.
 @lineheight:unit(@fontScale, em);
 @headingDeepest: 6; // Should remain 6 or fewer.
-@headingMultiplier: 1.18;
+@headingMultiplier: 1.15;
 
-
-@menubackgroundcolor: @accent;
-@menulinkcolor: #fff;
-@menuline: @linecolor;
-@menulighthover: #f2f2f2;
-
-@maxwidth: 1140px;
+@maxwidth: 1100px;
 @minwidth: 300px;
 @breakpoint: 640px; // point at which columns stack
 
 
 /*
-1. Core
+2. Core
 -------
 */
 
@@ -65,46 +68,84 @@ as there is a lot of overlap between the two.
 //@import "plugins/drupal-forms";
 
 body {
-	background-color:#ccc; // footer color
+	background-color:#cdfbee; // footer color
+	color:#6ed09b;
+	font-weight:300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:300;
 }
 
 /*
-2. Layout
+3. Layout
 ---------
 */
 
 // pull in grid
 @import "plugins/grid.less";
-#preamble {
-	background-color:darken(@background, 10%);
-	color:darken(@background, 40%);
-	font-size:0.8em;
-	padding:0.2em 0;
-}
 #wrapper {
 	background-color:@background;
 	color:@color;
 }
+header#site_header {
+	background-color:#deeefb;
+	h1, ul.menu {
+		padding-top:50px;
+	}
+	h1 {
+		margin:0;
+		padding-left:0.5em;
+		padding-right:0.5em;
+		display:inline-block;
+		font-size:1.8em;
+		font-weight:300;
+		color:#fff;
+		background-color:@accent;
+	}
+	ul.menu {
+		margin:0;
+		li  {
+				a {
+					font-size:1.1em;
+					line-height:2.3em;
+					text-decoration:none;
+				}
+			}
+		}
+}
+#description {
+	padding:14% 0;
+	p {
+		margin:0;
+		color:#999;
+		font-size:1.6em;
+		line-height:1.5em;
+		font-weight:200;
+		font-style:italic;
+	}
+}
+.gray {
+	background-color:#eee;
+	color:#999;
+	padding:@lineheight 0;
+}
+#features {
+	padding:@lineheight 0;
+}
 footer {
-	padding:1em 0;
+	padding:@lineheight 0;
 }
 
 /*
-3. Module
----------
+4. Sections
+-----------
 */
 
 // pull in the various module plugins
 @import "plugins/menu";
 //@import "plugin/drupal-menu"
 //@import "plugins/drupal";
-
-
-/*
-4. Theme
---------
-*/
-
 
 
 /*

@@ -16,69 +16,81 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="preamble" class="row">
+			<header id="site_header">
 				<div class="grid">
-					<div class="g12">
-						From <a href="http://rewdy.com">Rewdy.com</a>
+					<div class="g4">
+						<h1>ModCore</h1>
 					</div>
-				</div> <!-- close .grid -->
-			</div>
-			<header>
-				<div class="grid">
-					<div class="g12">
-						<h1 class="center">ModCore</h1>
-					</div>
-				</div> <!-- close .grid -->
-			</header>
-			<div id="nav_holder">
-				<div class="grid">
-					<div class="g12">
+					<div class="g8">
 						<nav>
-							<ul class="menu">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="grid.html">Grid Demonstration</a></li>
-								<li><a href="nested-grid.html">Nested Grid</a></li>
-								<li><a href="blank.html">Blank Page</a></li>
+							<ul class="menu right">
+								<li><a href="features.html">Features &amp; Demo</a></li>
+								<li><a href="docs/index.html">Documentation</a></li>
+								<li><a href="#">Download</a></li>
 							</ul>
 						</nav>
 					</div>
 				</div> <!-- close .grid -->
-			</div>
-			<div id="primary_row">
-				<div class="grid row">
-					<div class="g2">
-						<ul class="lined linked">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="grid.html">Grid Demonstration</a></li>
-							<li><a href="nested-grid.html">Nested Grid</a></li>
-							<li><a href="blank.html">Blank Page</a></li>
-						</ul>
-					</div>
-					<div class="g10">
-						<h1>ModCore</h1>
-						<p>A simple, modular grid for quick prototyping and page layout.</p>
-					</div>
-				</div> <!-- close .grid.row -->
-			</div>
-
-			<footer>
+			</header>
+			<section id="description">
 				<div class="grid">
-					<div class="g4">
-						<h3>Hot Links</h3>
-
+					<div class="g8 gcenter center">
+						<p class="attn">A simple, modular framework for quick prototyping and page layout built on LessCSS.</p>
 					</div>
-					<div class="g4">
-						<h3>Contact Us</h3>
-
-					</div>
-					<div class="g4">
-						<h3>Social Mediar</h3>
-
+				</div>
+			</section>
+			<section id="why" class="gray">
+				<div class="grid">
+					<div class="g12">
+						<h2>Why?</h2>
+						<div class="widetext">
+							<p><strong>Why build another CSS/JS framework? When there are already so many other frameworks and grid systems, what’s a good reason for creating another one?</strong> In short the answer is simplicity. Most frameworks out there are either extremely robust and inflexible (i.e. they dictate most details of how you write your code) or they are just a grid system.</p>
+							<p>My goal in creating ModCore was to create something that was robust enough to provide a useful starting point, but that was modular so any unused components could easily be removed or replaced. With that goal in mind, ModCore is based on LessCSS, it is designed as a starting point, but not to work straight out of the box.</p>
+							<p><a href="#" class="more_link">Learn more about the components&hellip;</a></p>
+						</div>
 					</div>
 				</div> <!-- close .grid -->
-			</footer>
+			</section>
+			<section id="features">
+				<div class="grid">
+					<div class="g12">
+						<h2>Features</h2>
+						<div class="row">
+							<div class="g4">
+								Light Reset
+							</div>
+							<div class="g4">
+								Grid System
+							</div>
+							<div class="g4">
+								Sensible Typography
+							</div>
+							<div class="g4">
+								Basic Forms
+							</div>
+							<div class="g4">
+								Helpful Classes
+							</div>
+							<div class="g4">
+								LESS Mixins
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</div> <!-- close #wrapper -->
+		<footer>
+			<div class="grid">
+				<div class="g6">
+					<ul class="blocked">
+						<li>Follow on Twitter</li>
+						<li>Fork on GitHub</li>
+					</ul>
+				</div>
+				<div class="g6 right">
+					<p>Made by <a href="http://rewdy.com" rel="me">Rewdy</a></p>
+				</div>
+			</div> <!-- close .grid -->
+		</footer>
 	</body>
 </html>
