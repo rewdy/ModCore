@@ -111,3 +111,5 @@ ol.lined li{list-style-position:inside;margin:0;padding:.4em;border-bottom:1px s
 img.right{float:right;margin:0 0 .5em .5em;text-align:center}
 img.left{float:left;margin:0 .5em .5em 0;text-align:center}
 table.narrow{width:auto}
+.show-mobile{display:none}
+@media only screen and (max-width:640px){.show-mobile{display:block} span.show-mobile,i.show-mobile{display:inline} .show-big{display:none}}

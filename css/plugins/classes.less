@@ -42,3 +42,19 @@ img.left {
 table.narrow {
 	width: auto;
 }
+
+.show-mobile {
+	display:none;
+}
+@media only screen and (max-width:@breakpoint) {
+	.show-mobile {
+		display:block;
+	}
+	span.show-mobile,
+	i.show-mobile {
+		display:inline;
+	}
+	.show-big {
+		display:none;
+	}
+}
