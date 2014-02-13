@@ -113,7 +113,7 @@
 	}
 }
 
-/* Clearfixed styles to be included elsewhere. */
+// Clearfixed styles to be included elsewhere.
 .clearfixed {
 	content: " ";
 	display: block;
@@ -124,4 +124,12 @@
 
 .clearfix:after {
 	.clearfixed;
+}
+
+// Layout-related utilities
+.border-box {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
 }

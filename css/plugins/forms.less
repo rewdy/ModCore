@@ -1,28 +1,33 @@
 /* Forms */
 
+@formlinecolor: darken(@linecolor, 10%);
+@formlinefocus: @accent;
+
 // basic form item container
-.form_item,
+.form-item,
 fieldset {
 	margin:0 0 1em 0;
 }
 fieldset fieldset {
 	margin:0;
 }
+
 // standard labels, legends for checkbox and radio arrays
-.form_item label,
-.form_item fieldset legend,
+.form-item label,
+.form-item fieldset legend,
 fieldset.select legend {
 	display:block;
 	font-weight:bold;
 }
+
 // grouped content for checkboxes
-.form_item fieldset,
+.form-item fieldset,
 fieldset.select {
 	column-count: 3;
 	column-gap:2%;
 }
 fieldset.select label,
-.form_item fieldset label {
+.form-item fieldset label {
 	display:inline;
 	font-weight:normal;
 	cursor:pointer;
@@ -30,28 +35,33 @@ fieldset.select label,
 }
 
 // standard input help
-.form_item .form_help {
+.form-item .input-help,
+.form-item .help {
 	font-size:0.9em;
 	font-style:italic;
 }
 
-// inputs, textareas, selects, buttons, etc.!
+// inputs, textareas, selects, buttons
 input[type=text],
+input[type=email],
+input[type=number],
 input[type=password],
 textarea,
 select {
+	max-width:100%;
 	font-size:1em;
 	font-family: @font;
 	padding:0.4em;
-	border:1px solid #ddd;
-	box-shadow:inset 1px 1px 3px rgba(0,0,0,0.1);
+	border:1px solid @formlinecolor;
 	outline: none;
+	.border-box;
 	&:focus {
-		border-color: #666;
+		border-color: @formlinefocus;
 	}
 }
 input[type=text],
-input[type=password] {
+input[type=email],
+input[type=password], {
 	width: 24em;
 }
 button,
@@ -63,26 +73,27 @@ input[type=reset] {
 	font-size:1em;
 	line-height:1.5em;
 	font-family: @font;
-	padding:0.3em 0.8em;
+	padding:0.5em 1em 0.4em;
 	color:#fff;
-	background: @accent;
+	background:@accent;
 	border: solid darken(@accent, 10%);
 	border-width:0 0 2px 0;
 	cursor: pointer;
-	border-radius:3px;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
+	.transition(background-color);
+	&:hover {
+		background-color:darken(@accent, 5%);
+	}
 	&:active {
-		border-width:0;
 		position:relative;
 		top:2px;
+		border-bottom:0;
 	}
 }
 
 // some classes for variations
 div.submit {
 	padding-top:1em;
-	border-top:1px solid #ddd;
+	border-top:1px solid @formlinecolor;
 }
 input.narrow {
 	width:10em;
@@ -91,17 +102,20 @@ input.long {
 	width:30em;
 }
 input.full {
-	width:96%;
+	width:100%;
 }
-/* media specifics */
+
+// media specifics
 @media only screen and (max-width: @breakpoint) {
 	input[type=text],
+	input[type=email],
+	input[type=number],
 	input[type=password],
 	input.long {
-		width:96%;
+		width:100%%;
 	}
 	input.narrow {
-		width:43%;
+		width:45%;
 	}
 }
 

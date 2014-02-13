@@ -29,25 +29,32 @@ ol li {
 }
 
 table {
-	border:1px solid @linecolor;
-	width:100%;
 	border-collapse: collapse;
+	tr {
+		th, td {
+			padding:0 0.5em 0 0;
+			margin:0;
+		}
+		th {
+			text-align: left;
+		}
+	}
 }
-table tr th,
-table tr td {
-	padding:0 0.4em;
-	margin:0;
-	border-bottom:1px solid @linecolor;
-}
-table tr th + th ,
-table tr td + td {
-	border-left:1px solid @linecolor;
-}
-table tr th {
-	text-align: left;
-}
-table tr:hover td {
-	background-color: lighten(@accent, 70%);
+table.data {
+	width:100%;
+	border:2px solid @linecolor;
+	&.collapse {
+		width:auto;
+	}
+	tr {
+		th, td {
+			padding:0.25em 0.5em;
+			border-bottom:1px solid @linecolor;
+		}
+		th {
+			text-align: left;
+		}
+	}
 }
 
 blockquote {
@@ -55,12 +62,12 @@ blockquote {
 	font-size:1.2em;
 	font-style:italic;
 	line-height:@lineheight;
-	background-color: lighten(@accent, 60%);
+	background-color:@screen;
 }
 code, pre {
 	font-size:1.15em;
 	padding:0.2em;
-	background-color: lighten(@accent, 60%);
+	background-color:@screen;
 }
 pre {
 	padding:0.5em 0.8em;

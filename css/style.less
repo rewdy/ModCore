@@ -13,9 +13,8 @@ Table of Contents
 
 1. Core
 2. Layout
-3. Module
-4. Theme
-5. State
+3. Sections
+4. Variations
 
 ----------
 
@@ -27,12 +26,14 @@ as there is a lot of overlap between the two.
 */
 
 @background: #fff;
+@footerbackground:#e6e6e6;
 @color: #333;
 @accent: #0058a9;
 @linkcolor: @accent;
 @linkhover: #000;
-@linecolor: #e6e6e6;
+@linecolor: #ddd;
 
+@screen: #e6e6e6;
 @selection: #FFEB38;
 
 @font: sans-serif;
@@ -65,7 +66,7 @@ as there is a lot of overlap between the two.
 //@import "plugins/drupal-forms";
 
 body {
-	background-color:#ccc; // footer color
+	background-color:@footerbackground; // footer color set here
 }
 
 /*
@@ -85,31 +86,49 @@ body {
 	background-color:@background;
 	color:@color;
 }
+#content-body {
+	padding:2em 0;
+}
 footer {
 	padding:1em 0;
 }
 
 /*
-3. Module
----------
+3. Sections
+-----------
 */
 
 // pull in the various module plugins
-@import "plugins/menu";
 //@import "plugin/drupal-menu"
 //@import "plugins/drupal";
-
+#nav-holder {
+	background-color:@menubackgroundcolor;
+	ul.menu {
+		margin:0;
+		padding:0.2em 0;
+		text-align:center;
+		li {
+			margin:0;
+			padding:0;
+			display:inline;
+			list-style:none;
+			a {
+				display:inline-block;
+				padding:0.4em 0.8em;
+				color:@menulinkcolor;
+				background-color:@menubackgroundcolor;
+				text-decoration:none;
+				&:hover {
+					background-color:darken(@menubackgroundcolor, 5%);
+				}
+			}
+		}
+	}
+}
 
 /*
-4. Theme
---------
-*/
-
-
-
-/*
-5. State
---------
+4. Variations
+-------------
 */
 
 // pull in classes
