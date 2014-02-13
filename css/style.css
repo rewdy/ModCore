@@ -43,19 +43,19 @@ input.full{width:100%}
 #wrapper.blocked{margin:0 auto 3em auto;max-width:1140px}
 .grid{margin:0 auto;max-width:1140px;min-width:300px}.grid:after{content:" ";display:block;clear:left;height:0;overflow:hidden}
 .row{margin-bottom:1.5em}
-.column{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}
-.grid .g12{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:100%}
-.grid .g11{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:91.66666666666666%}
-.grid .g10{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:83.33333333333334%}
-.grid .g9{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:75%}
-.grid .g8{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:66.66666666666666%}
-.grid .g7{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:58.333333333333336%}
-.grid .g6{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:50%}
-.grid .g5{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:41.66666666666667%}
-.grid .g4{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:33.33333333333333%}
-.grid .g3{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:25%}
-.grid .g2{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:16.666666666666664%}
-.grid .g1{float:left;padding:0 1em;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:8.333333333333332%}
+.column{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
+.grid .g12{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:100%}
+.grid .g11{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:91.66666666666666%}
+.grid .g10{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:83.33333333333334%}
+.grid .g9{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:75%}
+.grid .g8{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:66.66666666666666%}
+.grid .g7{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:58.333333333333336%}
+.grid .g6{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:50%}
+.grid .g5{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:41.66666666666667%}
+.grid .g4{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:33.33333333333333%}
+.grid .g3{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:25%}
+.grid .g2{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:16.666666666666664%}
+.grid .g1{float:left;padding:0 1em;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:8.333333333333332%}
 .grid .push12{position:relative;left:100%}
 .grid .push11{position:relative;left:91.66666666666666%}
 .grid .push10{position:relative;left:83.33333333333334%}
