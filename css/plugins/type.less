@@ -3,21 +3,30 @@
 body {
 	font-family:@font;
 	font-size:@size;
+	font-weight:@fontweightnormal;
 	line-height:@lineheight;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-ms-font-smoothing:antialiased;
+	font-smoothing:antialiased;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin:0.2em 0 0.5em 0;
 	line-height:unit(@fontScale*0.93, em);
-	font-weight:500;
+	font-size:1em;
+	font-weight:@fontweightbold;
 }
-.headingLoop (@index; @base: 1) when (@index > 0) {
-	@headingSize: round(@base * @headingMultiplier, 3);
-	h@{index} {
-		font-size:~"@{base}em";
-	}
-	.headingLoop(@index - 1, @headingSize);
+h1 {
+	font-size:2em;
 }
-.headingLoop(@headingDeepest);
+h2 {
+	font-size:1.5em;
+	font-weight:@fontweightnormal;
+}
+h3 {
+	font-size:1.2em;
+}
+
 
 p, ul, ol, blockquote, pre, table {
 	margin:0 0 @lineheight 0;

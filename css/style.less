@@ -3,7 +3,7 @@
 Stylesheet
 ----------
 
-Project:	Title
+Project:	Genesys Theme
 Date:		00/00/00
 
 ----------
@@ -26,30 +26,36 @@ as there is a lot of overlap between the two.
 */
 
 @background: #fff;
-@footerbackground:#e6e6e6;
+@footerbackground:#ddd;
 @color: #333;
-@accent: #0058a9;
+@light:#999;
+@accent: #15a411;
+@pop: #cdc81e;
 @linkcolor: @accent;
 @linkhover: #000;
 @linecolor: #ddd;
 
-@screen: #e6e6e6;
-@selection: #FFEB38;
+@screen: #f2f2f2;
+@selection: fadeout(@pop, 20%);
+
+@menubackgroundcolor: darken(@screen, 2%);
+@menulinkcolor: @light;
+@menuline: @linecolor;
+@menulighthover: #e6e6e6;
 
 @font: sans-serif;
-@size: 1em;
+@size: 0.9em;
+@small: 0.8em;
 @fontScale: 1.5; // Used for line-height, margin, etc.
 @lineheight:unit(@fontScale, em);
 @headingDeepest: 6; // Should remain 6 or fewer.
 @headingMultiplier: 1.18;
 
+@fontweightlight:300;
+@fontweightnormal:400;
+@fontweightbold:700;
 
-@menubackgroundcolor: @accent;
-@menulinkcolor: #fff;
-@menuline: @linecolor;
-@menulighthover: #f2f2f2;
-
-@maxwidth: 1140px;
+@maxwidth: 840px;
 @minwidth: 300px;
 @breakpoint: 640px; // point at which columns stack
 
@@ -76,18 +82,85 @@ body {
 
 // pull in grid
 @import "plugins/grid.less";
-#preamble {
-	background-color:darken(@background, 10%);
-	color:darken(@background, 40%);
-	font-size:0.8em;
-	padding:0.2em 0;
+@drawerWidth:19em;
+#control {
+	#drawer,
+	#page {
+		-webkit-transition:all 0.3s;
+		-moz-transition:all 0.3s;
+		-ms-transition:all 0.3s;
+		transition:all 0.3s;
+	}
+	#drawer {
+		position:fixed;
+		top:0;
+		left:-@drawerWidth;
+		width:@drawerWidth;
+		height:100%;
+		z-index:2;
+	}
+	#page {
+		position:relative;
+		top:0;
+		left:0;
+		width:100%;
+	}
+	&.open {
+		overflow:hidden;
+		width:100%;
+		#drawer {
+			left:0;
+		}
+		#page {
+			left:@drawerWidth;
+		}
+	}
 }
 #wrapper {
 	background-color:@background;
 	color:@color;
 }
+#site-header {
+	padding:4.5em 0;
+	#site-title {
+		font-size:3em;
+		font-weight:@fontweightbold;
+		margin:0;
+		a {
+			color:@color;
+			text-decoration:none;
+		}
+	}
+	.grid {
+		position:relative;
+	}
+	#drawer-link-holder {
+		display:none;
+		position:absolute;
+		top:0;
+		left:(@gutter/2);
+		padding:0.5em 0;
+		#drawer-toggle-link {
+			display:block;
+			color:@color;
+			font-size:1.5em;
+			padding:0.5em 0.5em 0.4em 0.5em;
+			border:1px solid @light;
+			.text {
+				.accessible-hide;
+			}
+		}
+		@media only screen and (max-width:@breakpoint) {
+			display:block;
+		}
+	}
+}
+#content-body,
+.content-row {
+	padding:3em 0;
+}
 #content-body {
-	padding:2em 0;
+	background-color:@screen;
 }
 footer {
 	padding:1em 0;
@@ -99,32 +172,147 @@ footer {
 */
 
 // pull in the various module plugins
-//@import "plugin/drupal-menu"
-//@import "plugins/drupal";
-#nav-holder {
+nav#primary {
 	background-color:@menubackgroundcolor;
 	ul.menu {
 		margin:0;
-		padding:0.2em 0;
+		padding:0;
 		text-align:center;
 		li {
 			margin:0;
 			padding:0;
 			display:inline;
 			list-style:none;
+			position:relative;
 			a {
 				display:inline-block;
-				padding:0.4em 0.8em;
+				padding:1em 0.75em;
+				font-size:1.1em;
 				color:@menulinkcolor;
 				background-color:@menubackgroundcolor;
 				text-decoration:none;
 				&:hover {
+					color:darken(@menulinkcolor, 5%);
 					background-color:darken(@menubackgroundcolor, 5%);
+				}
+			}
+			&.current-menu-item a {
+				color:darken(@menulinkcolor, 5%);
+				font-weight:@fontweightbold;
+			}
+			&:hover > ul {
+				display:block;
+			}
+			ul {
+				display:none;
+				position:absolute;
+				top:2.4em;
+				min-width:10em;
+				-webkit-box-shadow:0 0.25em 1em rgba(0,0,0,0.2);
+				-moz-box-shadow:0 0.25em 1em rgba(0,0,0,0.2);
+				-ms-box-shadow:0 0.25em 1em rgba(0,0,0,0.2);
+				box-shadow:0 0.25em 1em rgba(0,0,0,0.2);
+				li {
+					display:block;
+					a {
+						display:block;
+						padding:0.5em 0.75em;
+						font-size:1em;
+						text-align:left;
+						background-color:#fff;
+						&:hover {
+							background-color:@accent;
+							color:#fff;
+						}
+					}
+					ul {
+						top:0;
+						left:100%;
+						&:after {
+							content:none;
+						}
+					}
+				}
+				&:after {
+					content: ' ';
+					display:block;
+					position:absolute;
+					top:-0.7em;
+					left:1em;
+					width:0;
+					height:0;
+					border-style:solid;
+					border-width:0 0.75em 0.75em 0.75em;
+					border-color:transparent transparent #fff transparent;
 				}
 			}
 		}
 	}
 }
+@media only screen and (max-width:@breakpoint) {
+	nav#primary {
+		display:none;
+	}
+}
+
+article {
+	margin-bottom:3em;
+	h1, h2, h3 {
+		a {
+			color:@color;
+			text-decoration:none;
+			&:hover {
+				text-decoration:underline;
+			}
+		}
+	}
+	.details {
+		padding:0.25em 0;
+		margin-bottom:@lineheight;
+		float:right;
+		color:@light;
+		opacity:0.7;
+		a {
+			color:darken(@light, 10%);
+			&:hover {
+				color:@color;
+			}
+		}
+		@media only screen and (max-width:@breakpoint) {
+			float:none;
+			text-align:center;
+		}
+	}
+}
+
+ul.link-list {
+	margin:0 0 @lineheight 0;
+	padding:0;
+	li {
+		display:inline;
+		list-style:none;
+		margin:0;
+		padding:0;
+		a {
+			display:inline-block;
+			padding:0.25em 0.5em;
+			margin:0;
+			background-color:#fff;
+			color:@light;
+			text-decoration:none;
+			i {
+				margin-right:0.25em;
+			}
+			&:hover {
+				color:@color;
+			}
+		}
+	}
+	@media only screen and (max-width:@breakpoint) {
+		text-align:center;
+	}
+}
+
 
 /*
 4. Variations
@@ -133,4 +321,11 @@ footer {
 
 // pull in classes
 @import "plugins/classes.less";
-
+.accessible-hide {
+	position:absolute;
+	top:0;
+	left:0;
+	width:0;
+	height:0;
+	overflow:hidden;
+}
