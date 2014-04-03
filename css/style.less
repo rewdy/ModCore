@@ -40,8 +40,8 @@ as there is a lot of overlap between the two.
 
 @color: #333;
 @light: #999;
-@font: Georgia, serif;
-@altfont: 'Raleway', sans-serif;
+@font: sans-serif;
+@altfont: @font;
 @heading: @altfont;
 @size: 1em;
 @fontScale: 1.5; // Used for line-height, margin, etc.
@@ -68,7 +68,6 @@ as there is a lot of overlap between the two.
 @import "plugins/core.less";
 @import "plugins/type.less";
 @import "plugins/forms.less";
-//@import "plugins/drupal-forms";
 
 body {
 	background-color:@footerbackground; // footer color set here
@@ -85,6 +84,14 @@ body {
 	background-color:@background;
 	color:@color;
 }
+#site-header {
+	padding:10% 0;
+	background-color:@accent;
+	color:#fff;
+	a {
+		color:#fff;
+	}
+}
 #content-body,
 .content-row {
 	padding:3em 0;
@@ -93,41 +100,13 @@ footer {
 	padding:1em 0;
 }
 
-#site-header {
-	padding:10% 0;
-	background-color:@accent;
-	color:#fff;
-	a {
-		color:#fff;
-	}
-	a.button {
-		padding:0.3em 1em;
-		margin:0 0.25em;
-		background-color:@accent;
-		border:2px solid fadeout(#fff, 60%);
-		-webkit-border-radius:3px;
-		-moz-border-radius:3px;
-		-ms-border-radius:3px;
-		border-radius:3px;
-		text-decoration:none;
-		.transition;
-		&:hover {
-			border-color:fadeout(#fff, 30%);
-		}
-	}
-}
-#content-intro {
-	background-color:@screen;
-}
 
 /*
 3. Sections
 -----------
 */
 
-// pull in the various module plugins
-//@import "plugin/drupal-menu"
-//@import "plugins/drupal";
+// nav
 #nav-holder {
 	background-color:@menubackgroundcolor;
 	ul.menu {
