@@ -5,9 +5,9 @@ article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,nav,secti
 img::selection{background:transparent}
 img::-moz-selection{background:transparent}
 body{-webkit-tap-highlight-color:rgba(71,99,158,0.8)}
-body{font-family:sans-serif;font-size:1em;line-height:1.5em;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-ms-font-smoothing:antialiased;font-smoothing:antialiased}
-h1,h2,h3,h4,h5,h6{margin:.2em 0 .5em 0;line-height:1.395em;font-family:sans-serif;font-weight:600;font-size:1em}
-h1{font-size:3em;font-family:sans-serif;font-weight:900}@media only screen and (max-width:640px){h1{font-size:2.5em}}
+body{font-family:Georgia,serif;font-size:1em;line-height:1.5em;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-ms-font-smoothing:antialiased;font-smoothing:antialiased}
+h1,h2,h3,h4,h5,h6{margin:.2em 0 .5em 0;line-height:1.395em;font-family:'Raleway',sans-serif;font-weight:700;font-size:1em}
+h1{font-size:3em;font-family:'Raleway',sans-serif;font-weight:900}@media only screen and (max-width:640px){h1{font-size:2.5em}}
 h2{font-size:1.7em}
 h3{font-size:1.2em}
 h4{font-size:1.1em}
@@ -17,7 +17,7 @@ table{border-collapse:collapse}table tr th,table tr td{padding:0 .5em 0 0;margin
 table tr th{text-align:left}
 table.data{width:100%;border:2px solid #ddd}table.data.collapse{width:auto}
 table.data tr th,table.data tr td{padding:.25em .5em;border-bottom:1px solid #ddd}
-table.data tr th{text-align:left}
+table.data tr th{font-family:'Raleway',sans-serif;font-weight:700;text-align:left}
 blockquote{padding:.5em .8em;font-size:1.2em;font-style:italic;line-height:1.5em;background-color:#e6e6e6}
 code,pre{font-size:1.15em;padding:.2em;background-color:#e6e6e6}
 pre{padding:.5em .8em;white-space:pre-wrap}
@@ -26,13 +26,13 @@ hr{margin:1em 0;border-top:1px solid #ddd}
 a{color:#47639e}a:hover{color:#000}
 .form-item,fieldset{margin:0 0 1em 0}
 fieldset fieldset{margin:0}
-.form-item label,.form-item fieldset legend,fieldset.select legend{display:block;font-weight:bold}
+.form-item label,.form-item fieldset legend,fieldset.select legend{display:block;font-family:'Raleway',sans-serif;font-weight:700}
 .form-item fieldset,fieldset.select{column-count:3;column-gap:2%}
 fieldset.select label,.form-item fieldset label{display:inline;font-weight:normal;cursor:pointer;margin-right:1em}
 .form-item .input-help,.form-item .help{font-size:.9em;font-style:italic}
-input[type=text],input[type=email],input[type=number],input[type=password],textarea,select{max-width:100%;font-size:1em;font-family:sans-serif;padding:.4em;border:1px solid #c4c4c4;outline:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,textarea:focus,select:focus{border-color:#004236}
+input[type=text],input[type=email],input[type=number],input[type=password],textarea,select{max-width:100%;font-size:1em;font-family:Georgia,serif;padding:.4em;border:1px solid #c4c4c4;outline:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,textarea:focus,select:focus{border-color:#004236}
 input[type=text],input[type=email],input[type=password]{width:24em}
-button,a.button,input[type=submit],input[type=button],input[type=reset]{display:inline-block;font-size:1em;line-height:1.5em;font-family:sans-serif;padding:.5em 1em .4em;color:#fff;background:#004236;border:0 none;cursor:pointer;-webkit-transition:background-color .3s linear;-moz-transition:background-color .3s linear;-ms-transition:background-color .3s linear;transition:background-color .3s linear}button:hover,a.button:hover,input[type=submit]:hover,input[type=button]:hover,input[type=reset]:hover{background-color:#002921}
+button,a.button,input[type=submit],input[type=button],input[type=reset]{display:inline-block;font-size:1em;line-height:1.5em;font-family:'Raleway',sans-serif;font-weight:400;padding:.5em 1em .4em;color:#fff;background:#004236;border:0 none;cursor:pointer;-webkit-transition:background-color .3s linear;-moz-transition:background-color .3s linear;-ms-transition:background-color .3s linear;transition:background-color .3s linear}button:hover,a.button:hover,input[type=submit]:hover,input[type=button]:hover,input[type=reset]:hover{background-color:#002921}
 div.submit{padding-top:1em;border-top:1px solid #c4c4c4}
 input.narrow{width:10em}
 input.long{width:30em}
@@ -90,7 +90,7 @@ footer{padding:1em 0}
 #site-header a.button{padding:.3em 1em;margin:0 .25em;background-color:#004236;border:2px solid rgba(255,255,255,0.4);-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;border-radius:3px;text-decoration:none;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-ms-transition:all .3s linear;transition:all .3s linear}#site-header a.button:hover{border-color:rgba(255,255,255,0.7)}
 #content-intro{background-color:#e6e6e6}
 #nav-holder{background-color:#004236}#nav-holder ul.menu{margin:0;padding:.2em 0;text-align:center}#nav-holder ul.menu li{margin:0;padding:0;display:inline;list-style:none}#nav-holder ul.menu li a{display:inline-block;padding:.4em .8em;color:#fff;background-color:#004236;text-decoration:none}#nav-holder ul.menu li a:hover{background-color:#002921}
-.attn{font-family:sans-serif;font-weight:400;font-size:1.3em;line-height:1.5em}
+.attn{font-family:'Raleway',sans-serif;font-weight:400;font-size:1.3em;line-height:1.5em}
 .box{background-color:#e6e6e6;padding:1em;margin-bottom:1.5em}.box>*:last-child{margin-bottom:0}
 .text-right,.text-right-d{text-align:right}
 .text-left,.text-left-d{text-align:left}

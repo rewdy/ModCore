@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin:0.2em 0 0.5em 0;
 	line-height:unit(@fontScale*0.93, em);
 	font-family:@heading;
-	font-weight:600;
+	font-weight:@fontweightbold;
 	font-size:1em;
 }
 
@@ -68,6 +68,8 @@ table.data {
 			border-bottom:1px solid @linecolor;
 		}
 		th {
+			font-family:@altfont;
+			font-weight:@fontweightbold;
 			text-align: left;
 		}
 	}
