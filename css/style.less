@@ -25,24 +25,27 @@ as there is a lot of overlap between the two.
 
 */
 
+
 @background: #fff;
 @footerbackground:#e6e6e6;
-@color: #333;
-@accent: #0058a9;
-@linkcolor: @accent;
+
+@accent: #004236;
+@pop: #f49c51;
+@linkcolor: #47639e;
 @linkhover: #000;
-@linecolor: #ddd;
 
 @screen: #e6e6e6;
-@selection: #FFEB38;
+@linecolor: #ddd;
+@selection: fadeout(@linkcolor, 20%);
 
+@color: #333;
+@light: #999;
 @font: sans-serif;
+@altfont: @font;
+@heading: @font;
 @size: 1em;
 @fontScale: 1.5; // Used for line-height, margin, etc.
 @lineheight:unit(@fontScale, em);
-@headingDeepest: 6; // Should remain 6 or fewer.
-@headingMultiplier: 1.18;
-
 
 @menubackgroundcolor: @accent;
 @menulinkcolor: #fff;
@@ -76,21 +79,43 @@ body {
 
 // pull in grid
 @import "plugins/grid.less";
-#preamble {
-	background-color:darken(@background, 10%);
-	color:darken(@background, 40%);
-	font-size:0.8em;
-	padding:0.2em 0;
-}
 #wrapper {
 	background-color:@background;
 	color:@color;
 }
-#content-body {
-	padding:2em 0;
+#content-body,
+.content-row {
+	padding:3em 0;
 }
 footer {
 	padding:1em 0;
+}
+
+#site-header {
+	padding:10% 0;
+	background-color:@accent;
+	color:#fff;
+	a {
+		color:#fff;
+	}
+	a.button {
+		padding:0.3em 1em;
+		margin:0 0.25em;
+		background-color:@accent;
+		border:2px solid fadeout(#fff, 60%);
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		-ms-border-radius:3px;
+		border-radius:3px;
+		text-decoration:none;
+		.transition;
+		&:hover {
+			border-color:fadeout(#fff, 30%);
+		}
+	}
+}
+#content-intro {
+	background-color:@screen;
 }
 
 /*

@@ -4,20 +4,36 @@ body {
 	font-family:@font;
 	font-size:@size;
 	line-height:@lineheight;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-ms-font-smoothing:antialiased;
+	font-smoothing:antialiased;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin:0.2em 0 0.5em 0;
 	line-height:unit(@fontScale*0.93, em);
-	font-weight:500;
+	font-family:@heading;
+	font-weight:600;
+	font-size:1em;
 }
-.headingLoop (@index; @base: 1) when (@index > 0) {
-	@headingSize: round(@base * @headingMultiplier, 3);
-	h@{index} {
-		font-size:~"@{base}em";
+
+h1 {
+	font-size:3em;
+	font-family:@heading;
+	font-weight:900;
+	@media only screen and (max-width:@breakpoint) {
+		font-size:2.5em;
 	}
-	.headingLoop(@index - 1, @headingSize);
 }
-.headingLoop(@headingDeepest);
+h2 {
+	font-size:1.7em;
+}
+h3 {
+	font-size:1.2em;
+}
+h4 {
+	font-size:1.1em;
+}
 
 p, ul, ol, blockquote, pre, table {
 	margin:0 0 @lineheight 0;
@@ -72,6 +88,11 @@ code, pre {
 pre {
 	padding:0.5em 0.8em;
 	white-space: pre-wrap;
+}
+
+acronym, abbr {
+	border-bottom:1px dotted @light;
+	cursor:help;
 }
 
 hr {

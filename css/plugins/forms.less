@@ -76,17 +76,11 @@ input[type=reset] {
 	padding:0.5em 1em 0.4em;
 	color:#fff;
 	background:@accent;
-	border: solid darken(@accent, 10%);
-	border-width:0 0 2px 0;
+	border:0 none;
 	cursor: pointer;
 	.transition(background-color);
 	&:hover {
 		background-color:darken(@accent, 5%);
-	}
-	&:active {
-		position:relative;
-		top:2px;
-		border-bottom:0;
 	}
 }
 
