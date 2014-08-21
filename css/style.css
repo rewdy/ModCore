@@ -11,28 +11,34 @@ h1{font-size:3em;font-family:sans-serif;font-weight:900}@media only screen and (
 h2{font-size:1.7em}
 h3{font-size:1.2em}
 h4{font-size:1.1em}
-p,ul,ol,blockquote,pre,table{margin:0 0 1.5em 0}
+p,ul,ol,blockquote,pre,table,address{margin:0 0 1.5em 0}
 ul li,ol li{margin-left:3em}
-table{border-collapse:collapse}table tr th,table tr td{padding:0 .5em 0 0;margin:0}
-table tr th{text-align:left}
-table.data{width:100%;border:2px solid #ddd}table.data.collapse{width:auto}
-table.data tr th,table.data tr td{padding:.25em .5em;border-bottom:1px solid #ddd}
-table.data tr th{font-family:sans-serif;font-weight:700;text-align:left}
-blockquote{padding:.5em .8em;font-size:1.2em;font-style:italic;line-height:1.5em;background-color:#e6e6e6}
-code,pre{font-size:1.15em;padding:.2em;background-color:#e6e6e6}
+table{width:100%;border-collapse:collapse}table caption{font-style:italic}
+table tr th,table tr td{padding:.4em .5em .4em .2em;margin:0;border-bottom:1px solid #ddd}
+table tr th{text-align:left;border-bottom-color:#ddd;font-weight:700}
+table tr:nth-child(odd) td{background-color:#f2f2f2}
+table.inline{width:auto}
+blockquote{padding:.5em .8em;font-size:1.2em;font-style:italic;line-height:1.5em;background-color:#f2f2f2}
+code,pre{font-size:1.15em;padding:.2em;background-color:#f2f2f2}
 pre{padding:.5em .8em;white-space:pre-wrap}
 acronym,abbr{border-bottom:1px dotted #999;cursor:help}
-hr{margin:1em 0;border-top:1px solid #ddd}
+figure{float:left;border:1px solid #ddd;padding:.5em;margin:0 0 1.5em 0}figure+*{clear:left}
+figcaption{font-size:.9em;font-style:italic;text-align:center}
+hr{margin:1.5em 0;border-top:1px solid #ddd}hr.thick{margin:3em 0}
+hr.short{margin:.5em 0}
 a{color:#47639e}a:hover{color:#000}
-.form-item,fieldset{margin:0 0 1em 0}
-fieldset fieldset{margin:0}
+.form-item,.form-item fieldset{margin:0 0 1em 0}
+fieldset{margin:0 0 1.5em 0;padding:1em 1.25em 1em 1.25em;border:1px solid #ddd;position:relative}fieldset legend{position:absolute;top:0;left:0;width:100%;padding:.5em 1.25em;display:block;font-weight:700;background-color:#f2f2f2;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}fieldset legend+*{margin-top:2.5em !important}
+fieldset p{margin-bottom:1em}
 .form-item label,.form-item fieldset legend,fieldset.select legend{display:block;font-family:sans-serif;font-weight:700}
-.form-item fieldset,fieldset.select{column-count:3;column-gap:2%}
-fieldset.select label,.form-item fieldset label{display:inline;font-weight:normal;cursor:pointer;margin-right:1em}
+.form-item fieldset,fieldset fieldset,fieldset.select{margin:0;padding:0;border:0 none}.form-item fieldset label,fieldset fieldset label,fieldset.select label{display:block;font-weight:400;cursor:pointer}
+.form-item fieldset.inline label,fieldset fieldset.inline label,fieldset.select.inline label{display:inline;margin-right:1em}
 .form-item .input-help,.form-item .help{font-size:.9em;font-style:italic}
 input[type=text],input[type=email],input[type=number],input[type=password],textarea,select{max-width:100%;font-size:1em;font-family:sans-serif;padding:.4em;border:1px solid #c4c4c4;outline:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,input[type=password]:focus,textarea:focus,select:focus{border-color:#004236}
 input[type=text],input[type=email],input[type=password]{width:24em}
+select{-webkit-border-radius:0;-moz-border-radius:0;-ms-border-radius:0;border-radius:0;min-width:12em}
 button,a.button,input[type=submit],input[type=button],input[type=reset]{display:inline-block;font-size:1em;line-height:1.5em;font-family:sans-serif;font-weight:400;padding:.5em 1em .4em;color:#fff;background:#004236;border:0 none;cursor:pointer;-webkit-transition:background-color .3s linear;-moz-transition:background-color .3s linear;-ms-transition:background-color .3s linear;transition:background-color .3s linear}button:hover,a.button:hover,input[type=submit]:hover,input[type=button]:hover,input[type=reset]:hover{background-color:#002921}
+button.reset,a.button.reset,input[type=reset]{background-color:#b3b3b3;color:#004236}button.reset:hover,a.button.reset:hover,input[type=reset]:hover{background-color:#ccc;color:#004236}
 div.submit{padding-top:1em;border-top:1px solid #c4c4c4}
 input.narrow{width:10em}
 input.long{width:30em}
@@ -89,7 +95,7 @@ input.full{width:100%}
 footer{padding:1em 0}
 #nav-holder{background-color:#004236}#nav-holder ul.menu{margin:0;padding:.2em 0;text-align:center}#nav-holder ul.menu li{margin:0;padding:0;display:inline;list-style:none}#nav-holder ul.menu li a{display:inline-block;padding:.4em .8em;color:#fff;background-color:#004236;text-decoration:none}#nav-holder ul.menu li a:hover{background-color:#002921}
 .attn{font-family:sans-serif;font-weight:400;font-size:1.3em;line-height:1.5em}
-.box{background-color:#e6e6e6;padding:1em;margin-bottom:1.5em}.box>*:last-child{margin-bottom:0}
+.box{background-color:#f2f2f2;padding:1em;margin-bottom:1.5em}.box>*:last-child{margin-bottom:0}
 .text-right,.text-right-d{text-align:right}
 .text-left,.text-left-d{text-align:left}
 .text-center,.text-center-d{text-align:center}

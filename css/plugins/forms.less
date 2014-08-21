@@ -5,11 +5,33 @@
 
 // basic form item container
 .form-item,
-fieldset {
+.form-item fieldset {
 	margin:0 0 1em 0;
 }
-fieldset fieldset {
-	margin:0;
+
+// basic fieldsets
+fieldset {
+	margin:0 0 @lineheight 0;
+	padding:1em 1.25em 1em 1.25em;
+	border:1px solid @linecolor;
+	position:relative;
+	legend {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		padding:0.5em 1.25em;
+		display:block;
+		font-weight:@fontweightbold;
+		background-color:@screen;
+		.border-box;
+		+ * {
+			margin-top:2.5em!important;
+		}
+	}
+	p {
+		margin-bottom:1em;
+	}
 }
 
 // standard labels, legends for checkbox and radio arrays
@@ -23,16 +45,20 @@ fieldset.select legend {
 
 // grouped content for checkboxes
 .form-item fieldset,
+fieldset fieldset,
 fieldset.select {
-	column-count: 3;
-	column-gap:2%;
-}
-fieldset.select label,
-.form-item fieldset label {
-	display:inline;
-	font-weight:normal;
-	cursor:pointer;
-	margin-right:1em;
+	margin:0;
+	padding:0;
+	border:0 none;
+	label {
+		display:block;
+		font-weight:@fontweightnormal;
+		cursor:pointer;
+	}
+	&.inline label {
+		display:inline;
+		margin-right:1em;
+	}
 }
 
 // standard input help
@@ -65,6 +91,13 @@ input[type=email],
 input[type=password], {
 	width: 24em;
 }
+select {
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	border-radius:0;
+	min-width:12em;
+}
 button,
 a.button,
 input[type=submit],
@@ -83,6 +116,16 @@ input[type=reset] {
 	.transition(background-color);
 	&:hover {
 		background-color:darken(@accent, 5%);
+	}
+}
+button.reset,
+a.button.reset,
+input[type=reset] {
+	background-color:lighten(@light, 10%);
+	color:@accent;
+	&:hover {
+		background-color:lighten(@light, 20%);
+		color:@accent;
 	}
 }
 
